@@ -1,4 +1,4 @@
-````markdown
+
 # AWS Task Manager
 
 A serverless task management system built with React, AWS Cognito, API Gateway, Lambda, DynamoDB, S3, and optional MySQL integration. Allows users to authenticate, create/update/delete tasks, and upload/download attachments.
@@ -91,7 +91,6 @@ A serverless task management system built with React, AWS Cognito, API Gateway, 
    ```bash
    npm run build
    aws s3 sync build/ s3://your-frontend-bucket --acl public-read
-````
 
 ---
 
