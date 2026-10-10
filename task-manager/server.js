@@ -8,11 +8,11 @@ app.use(express.json());
 
 // MySQL connection pool
 const pool = mysql.createPool({
-  host: 'project-r-db.cv6og2gy4aa1.eu-north-1.rds.amazonaws.com',
-  user: 'admin',
-  password: 'Messi2020$',
-  database: 'projectDB',
-  port: 3306,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: Number(process.env.DB_PORT) || 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
